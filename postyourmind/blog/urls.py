@@ -1,4 +1,4 @@
-from postyourmind.blog.views import comment_approve
+#from postyourmind.blog.views import comment_approve
 from django.conf.urls import url
 from blog import views
 
@@ -20,3 +20,10 @@ urlpatterns = [
         views.comment_remove, name='comment_remove'),
     url(r'post/(?P<pk>\d+)/publish/$', views.post_publish, name='post_publish'),
 ]
+'''
+
+
+urlpatterns = [
+    url(r'^$', views.index, name='post_list'),
+]
+'''

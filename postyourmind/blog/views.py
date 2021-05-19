@@ -73,7 +73,7 @@ def add_comment_to_post(request, pk):
 @login_required
 def post_publish(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    post.publish
+    post.publish()
     return redirect('post_detail', pk=pk)
 
 
@@ -90,3 +90,12 @@ def comment_remove(request, pk):
     post_pk = comment.post.pk
     comment.delete()
     return redirect('post_detail', pk=post_pk)
+
+
+###
+'''
+
+
+def index(request):
+    return render(request, 'blog/test.html')
+'''
